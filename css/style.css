@@ -416,6 +416,43 @@ main::before {
   gap: 10rem;
   padding: 1rem;
 }
+.main-wrapper .title-carousel {
+  position: relative;
+}
+.main-wrapper .title-carousel::before, .main-wrapper .title-carousel::after {
+  content: ">";
+  z-index: 10;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 30px;
+  font-size: 20px;
+  color: #808080;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 2.5rem;
+  height: 2.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+}
+.main-wrapper .title-carousel::after {
+  content: "<";
+  left: 10px;
+}
 .main-wrapper .title img {
   -webkit-filter: drop-shadow(1px 1px #000);
           filter: drop-shadow(1px 1px #000);
@@ -930,11 +967,143 @@ main::before {
   line-height: 1.625rem;
 }
 .our-services .services-list--text h4 {
-  color: #2B2B2B;
+  color: #2b2b2b;
   font-size: 1.2125rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+.across-town {
+  position: relative;
+}
+.across-town::before {
+  content: "";
+  position: absolute;
+  bottom: -7rem;
+  right: 12rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4361ee), to(rgba(67, 97, 238, 0)));
+  background: linear-gradient(180deg, #4361ee 0%, rgba(67, 97, 238, 0) 100%);
+  opacity: 0.5;
+}
+.across-town::after {
+  content: "";
+  position: absolute;
+  top: -7rem;
+  left: 40rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4361ee), to(rgba(67, 97, 238, 0)));
+  background: linear-gradient(180deg, #4361ee 0%, rgba(67, 97, 238, 0) 100%);
+  opacity: 0.5;
+}
+
+.acoss-town--tirtle {
+  margin: 13rem 2.2rem 5rem;
+}
+
+.across-town--list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.across-town--list li {
+  position: relative;
+}
+.across-town--list li::after {
+  content: "New York City, NY";
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+  color: var(--White, #fff);
+  font-size: 1.2125rem;
+  font-weight: 500;
+}
+.across-town--list li::before {
+  content: "216";
+  position: absolute;
+  bottom: 5rem;
+  left: 4rem;
+  color: var(--White, #fff);
+  text-shadow: 2px 10px 30px rgba(0, 0, 0, 0.25);
+  opacity: 0.6;
+  mix-blend-mode: hard-light;
+  font-size: 3.58125rem;
+  font-weight: 600;
+  line-height: 4.0625rem;
+}
+
+.team {
+  margin-top: 12rem;
+  margin-bottom: 11rem;
+}
+.team-title {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.team-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 4rem;
+}
+.team-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+.team-list ul li span {
+  text-align: center;
+  leading-trim: both;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.team-list ul li h2 {
+  text-align: center;
+  leading-trim: both;
+  font-size: 1.725rem;
 }
 
 @media (max-width: 768px) {
